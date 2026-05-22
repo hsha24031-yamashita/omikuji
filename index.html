@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Fortune - 相棒と育つおみくじ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <div class="status-bar">
+                <span id="day-count">Day 1</span>
+                <span id="evolution-stage">卵の状態</span>
+            </div>
+        </header>
+
+        <!-- Main Area -->
+        <main>
+            <div class="character-area">
+                <div id="character" class="character egg"></div>
+                <div id="message-bubble" class="hidden">
+                    <p id="omikuji-text"></p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Action Area -->
+        <footer>
+            <div class="action-buttons">
+                <button id="draw-btn" class="btn-primary">おみくじを引く</button>
+                <button id="consult-btn" class="btn-secondary">相棒に相談する</button>
+            </div>
+            <div id="report-area" class="hidden">
+                <div class="input-group">
+                    <input type="text" id="action-input" placeholder="何をしたか記録しよう...">
+                    <button id="report-btn">実践報告！</button>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Log Area -->
+        <section class="log-section">
+            <h3>成長の軌跡</h3>
+            <div id="growth-log"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
