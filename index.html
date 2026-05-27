@@ -3,49 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Growth Fortune - 相棒と育つおみくじ</title>
+    <title>Growth Fortune | Midnight Blue</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="app-container">
-        <!-- Header -->
         <header>
-            <div class="status-bar">
-                <span id="day-count">Day 1</span>
-                <span id="evolution-stage">卵の状態</span>
+            <div id="step-counter">LV. 1</div>
+            <div class="progress-container">
+                <div id="progress-bar"></div>
             </div>
         </header>
 
-        <!-- Main Area -->
         <main>
-            <div class="character-area">
-                <div id="character" class="character egg"></div>
-                <div id="message-bubble" class="hidden">
-                    <p id="omikuji-text"></p>
+            <div class="evolution-display">
+                <div id="animal-sprite" class="egg-animation">🥚</div>
+                <h2 id="animal-name">運命の卵</h2>
+                <p id="animal-message">あなたの目標は？</p>
+                
+                <div id="goal-selector" class="goal-grid">
+   　　　　　　　　<button onclick="initGame('study', '知性（フクロウ）')">勉強・資格</button>
+    　　　　　　　<button onclick="initGame('sport', '活力（ライオン）')">運動・健康</button>
+    　　　　　　　<button onclick="initGame('art', '感性（クジャク）')">芸術・趣味</button>
+    　　　　　　　<button onclick="initGame('business', '富貴（龍）')">仕事・成功</button>
+    　　　　　　　<button onclick="initGame('saving', '蓄財（リス）')">貯金・節約</button>
+    　　　　　　　<button onclick="initGame('love', '調和（ペンギン）')">人間関係・愛</button>
+    　　　　　　　<button onclick="initGame('beauty', 'しなやか（ネコ）')">美容・柔軟</button>
+　　　　　　　　　</div>
+            </div>
+
+            <div id="action-panel" class="hidden">
+                <div id="draw-view">
+                    <button id="simple-draw-btn" class="simple-btn">おみくじを引く</button>
+                </div>
+
+                <div id="result-view" class="hidden">
+                    <div class="fortune-card">
+                        <div id="rank-badge"></div>
+                        <p id="ai-action"></p>
+                    </div>
+                    <button id="complete-btn" class="action-btn">アクション完了</button>
                 </div>
             </div>
         </main>
 
-        <!-- Action Area -->
-        <footer>
-            <div class="action-buttons">
-                <button id="draw-btn" class="btn-primary">おみくじを引く</button>
-                <button id="consult-btn" class="btn-secondary">相棒に相談する</button>
-            </div>
-            <div id="report-area" class="hidden">
-                <div class="input-group">
-                    <input type="text" id="action-input" placeholder="何をしたか記録しよう...">
-                    <button id="report-btn">実践報告！</button>
-                </div>
-            </div>
+        <footer class="archive-section">
+            <button id="toggle-log">成長の足跡 ▽</button>
+            <ul id="log-list" class="hidden"></ul>
         </footer>
-
-        <!-- Log Area -->
-        <section class="log-section">
-            <h3>成長の軌跡</h3>
-            <div id="growth-log"></div>
-        </section>
     </div>
     <script src="script.js"></script>
 </body>
