@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Growth Fortune | Midnight Blue</title>
+    <title>Growth Fortune</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,26 +17,25 @@
 
         <main>
             <div class="evolution-display">
-                <div id="animal-sprite" class="egg-animation">🥚</div>
+                <div id="animal-sprite">🥚</div>
                 <h2 id="animal-name">運命の卵</h2>
                 <p id="animal-message">あなたの目標は？</p>
-                
                 <div id="goal-selector" class="goal-grid">
-   　　　　　　　　<button onclick="initGame('study', '知性（フクロウ）')">勉強・資格</button>
-    　　　　　　　<button onclick="initGame('sport', '活力（ライオン）')">運動・健康</button>
-    　　　　　　　<button onclick="initGame('art', '感性（クジャク）')">芸術・趣味</button>
-    　　　　　　　<button onclick="initGame('business', '富貴（龍）')">仕事・成功</button>
-    　　　　　　　<button onclick="initGame('saving', '蓄財（リス）')">貯金・節約</button>
-    　　　　　　　<button onclick="initGame('love', '調和（ペンギン）')">人間関係・愛</button>
-    　　　　　　　<button onclick="initGame('beauty', 'しなやか（ネコ）')">美容・柔軟</button>
-　　　　　　　　　</div>
+                    <button onclick="initGame('study', '知性（フクロウ）')">勉強・資格</button>
+                    <button onclick="initGame('sport', '活力（ライオン）')">運動・健康</button>
+                    <button onclick="initGame('art', '感性（クジャク）')">芸術・趣味</button>
+                    <button onclick="initGame('business', '富貴（龍）')">仕事・成功</button>
+                    <button onclick="initGame('saving', '蓄財（リス）')">貯金・節約</button>
+                    <button onclick="initGame('love', '調和（ペンギン）')">人間関係・愛</button>
+                    <button onclick="initGame('beauty', 'しなやか（ネコ）')">美容・柔軟</button>
+                </div>
             </div>
 
             <div id="action-panel" class="hidden">
                 <div id="draw-view">
+                    <div id="omikuji-box">🏮</div>
                     <button id="simple-draw-btn" class="simple-btn">おみくじを引く</button>
                 </div>
-
                 <div id="result-view" class="hidden">
                     <div class="fortune-card">
                         <div id="rank-badge"></div>
